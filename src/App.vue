@@ -10,44 +10,40 @@
           transition="scale-transition"
           width="40"
         />
-        <v-btn href="#" text style="font-size: 32px">Hotels</v-btn>
+        <v-btn
+          @click="$router.push({ name: 'Home' })"
+          text
+          style="font-size: 32px"
+          >Hotels</v-btn
+        >
       </div>
 
       <v-spacer></v-spacer>
 
       <div>
-      <v-autocomplete
-        label="Country"
-        color="primary"
-        cache-items
-        :search-input.sync="search"
-        hide-details
-        hide-no-data
-      >
-      </v-autocomplete>
+        <v-autocomplete
+          label="Country"
+          color="primary"
+          cache-items
+          :search-input.sync="search"
+          hide-details
+          hide-no-data
+        >
+        </v-autocomplete>
       </div>
     </v-app-bar>
-
     <v-main>
-      <v-row no-gutters>
-        <v-col cols="6" v-for="n in 12" :key="n">
-          <MainPage/>
-        </v-col>
-      </v-row>
-      <!-- <MainPage /> -->
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import MainPage from "./components/MainPage";
 
 export default {
   name: "App",
 
-  components: {
-    MainPage
-  },
+  components: {},
 
   data: () => ({
     data: null
@@ -58,7 +54,7 @@ export default {
 <style >
 .v-select.v-text-field input {
   color: #800000 !important;
-  font-size:16px;
+  font-size: 16px;
 }
 .v-select.v-text-field label {
   color: #800000 !important;

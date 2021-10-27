@@ -1,9 +1,11 @@
 <template>
   <v-container class="pt-6">
-    <v-row class="justify-center">
-      <span>Main Page</span>
-    </v-row>
-    <v-card @click="goToDetails('id')" id="card" max-width="500" class="mx-auto my-12">
+    <v-card
+      @click="goToDetails(id)"
+      id="card"
+      max-width="500"
+      class="mx-auto my-12"
+    >
       <v-img height="250" src="../assets/logo.svg"></v-img>
       <v-card-title>Hotel Name</v-card-title>
       <v-card-text>
@@ -85,6 +87,9 @@
 
 <script>
 export default {
+  props: {
+    id: Number
+  },
   data() {
     return {
       peopleCount: 0,
@@ -102,8 +107,7 @@ export default {
   },
   methods: {
     goToDetails(id) {
-      console.log(id)
-      window.location = '#'
+      this.$router.push({ name: "HotelDetail", params: { id: id } });
     }
   }
 };
