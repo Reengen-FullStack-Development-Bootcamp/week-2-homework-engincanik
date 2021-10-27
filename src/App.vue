@@ -1,60 +1,65 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
+    <v-app-bar app color="#d3eaed" dark>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
           class="shrink mr-2"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="./assets/hotel.svg"
           transition="scale-transition"
           width="40"
         />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
+        <v-btn
+          @click="$router.push({ name: 'Home' })"
+          text
+          style="font-size: 32px"
+          >Hotels</v-btn
+        >
       </div>
 
       <v-spacer></v-spacer>
 
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      <div>
+        <v-autocomplete
+          label="Country"
+          color="primary"
+          cache-items
+          :search-input.sync="search"
+          hide-details
+          hide-no-data
+        >
+        </v-autocomplete>
+      </div>
     </v-app-bar>
-
     <v-main>
-      <HelloWorld/>
+      <router-view></router-view>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
 
 export default {
-  name: 'App',
+  name: "App",
 
-  components: {
-    HelloWorld,
-  },
+  components: {},
 
   data: () => ({
-    //
-  }),
+    data: null
+  })
 };
 </script>
+
+<style >
+.v-select.v-text-field input {
+  color: #800000 !important;
+  font-size: 16px;
+}
+.v-select.v-text-field label {
+  color: #800000 !important;
+}
+.v-select {
+  color: #800000;
+}
+</style> 
