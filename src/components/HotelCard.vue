@@ -1,35 +1,34 @@
 <template>
-  <v-container class="pt-6">
-    <v-card
-      @click="goToDetails(id)"
-      id="card"
-      max-width="500"
-      class="mx-auto my-12"
-    >
-      <v-img height="250" src="../assets/logo.svg"></v-img>
-      <v-card-title>Hotel Name</v-card-title>
-      <v-card-text>
-        <v-row align="center" class="mx-0">
-          <v-rating
-            :value="4.5"
-            color="amber"
-            dense
-            half-increments
-            readonly
-            size="14"
-          ></v-rating>
-          <div class="grey--text ms-4">4.5(413)</div>
-        </v-row>
-        <div class="my-4 text-subtitle-1">$ Price • Country</div>
-        <div>
-          The Jianguo Hotel Qianmen is located near Tiantan Park, just a
-          10-minute walk from the National Center for the Performing Arts and
-          Tian'anmen Square. Built in 1956 it has old school charm and many
-          rooms still feature high, crown-molded ceilings.
-        </div>
-      </v-card-text>
-      <!-- <v-divider class="mx-4"></v-divider> -->
-      <!-- <v-card-text>
+  <v-card
+    @click="goToDetails(id)"
+    id="card"
+    max-width="500"
+    class="mx-auto my-12"
+  >
+    <v-img height="250" src="../assets/logo.svg"></v-img>
+    <v-card-title>Hotel Name</v-card-title>
+    <v-card-text>
+      <v-row align="center" class="mx-0">
+        <v-rating
+          :value="4.5"
+          color="amber"
+          dense
+          half-increments
+          readonly
+          size="14"
+        ></v-rating>
+        <div class="grey--text ms-4">4.5(413)</div>
+      </v-row>
+      <div class="my-4 text-subtitle-1">$ Price • Country</div>
+      <div>
+        The Jianguo Hotel Qianmen is located near Tiantan Park, just a 10-minute
+        walk from the National Center for the Performing Arts and Tian'anmen
+        Square. Built in 1956 it has old school charm and many rooms still
+        feature high, crown-molded ceilings.
+      </div>
+    </v-card-text>
+    <!-- <v-divider class="mx-4"></v-divider> -->
+    <!-- <v-card-text>
         <v-row class="d-flex justify-space-between">
           <div class="ms-4 text-subtitle-1 blue--text d-flex align-center">
             Guest amount:
@@ -81,8 +80,7 @@
           </v-date-picker>
         </v-dialog>
       </v-card-text> -->
-    </v-card>
-  </v-container>
+  </v-card>
 </template>
 
 <script>
@@ -93,17 +91,7 @@ export default {
   data() {
     return {
       peopleCount: 0,
-      dates: [],
-      modal: false,
-      date: new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
-        .toISOString()
-        .substr(0, 10)
     };
-  },
-  computed: {
-    dateRangeText() {
-      return this.dates.join(" - ");
-    }
   },
   methods: {
     goToDetails(id) {
