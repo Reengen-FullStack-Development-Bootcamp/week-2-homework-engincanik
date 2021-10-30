@@ -33,13 +33,14 @@
       </div>
     </v-app-bar>
     <v-main>
-      <router-view></router-view>
+      <v-container class="pt-6">
+        <router-view></router-view>
+      </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
-
 export default {
   name: "App",
 

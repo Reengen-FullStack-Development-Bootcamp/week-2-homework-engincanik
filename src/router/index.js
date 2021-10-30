@@ -13,6 +13,10 @@ const routes = [
     path: '/hotel/:id',
     name: 'HotelDetail',
     component: () => import('@/views/HotelDetail.vue')
+  },
+  {
+    path: '/reservation',
+    name: 'Reservation',
   }
 ]
 
