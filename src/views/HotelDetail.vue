@@ -126,7 +126,7 @@ export default {
       if (this.guestCount !== 0 && this.dates.length > 1) {
         this.$router.push({
           name: "Reservation",
-          params: { guestCount: this.guestCount }
+          params: { guestCount: this.guestCount, dates: this.dates}
         });
       } else {
         this.$toasted.show("Please select reservation date & guest count", {
