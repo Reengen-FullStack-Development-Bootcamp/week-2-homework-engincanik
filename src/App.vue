@@ -17,20 +17,6 @@
           >Hotels</v-btn
         >
       </div>
-
-      <v-spacer></v-spacer>
-
-      <div>
-        <v-autocomplete
-          label="Country"
-          color="primary"
-          cache-items
-          :search-input.sync="search"
-          hide-details
-          hide-no-data
-        >
-        </v-autocomplete>
-      </div>
     </v-app-bar>
     <v-main>
       <v-container class="pt-6">
