@@ -1,4 +1,11 @@
-# hotel-site
+# Hotel Site
+![Vue](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D) ![Vuetify](https://img.shields.io/badge/Vuetify-1867C0?style=for-the-badge&logo=vuetify&logoColor=AEDDFF)
+
+## Project Details
+A hotel site frontend developed with Vue, Vuetify, and Vuelidate. Users can reserve a hotel after selecting check-in and check-out times with guest count. Also, they need to fill reservation forms.
+
+## Project Display
+<img src="SS/hotel_site.gif" alt="Website Gif">
 
 ## Project setup
 ```
@@ -9,16 +16,3 @@ npm install
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
